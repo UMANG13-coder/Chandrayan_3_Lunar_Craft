@@ -27,7 +27,7 @@ describe("Testing Classes Functions", () => {
     let chandrayan;
     beforeEach(() => {
         galaxy = new Galaxy(3, 3, 3, 3, 3, 3);
-        chandrayan = new Chandrayan3_LunarCraft(0, 0, 0,'N', galaxy);
+        chandrayan = new Chandrayan3_LunarCraft(0, 0, 0, 'N', galaxy);
     })
     test("Testing for moveForward() Function with correct output", () => {
         command = ['f']
@@ -73,5 +73,24 @@ describe("Testing Classes Functions", () => {
             expect(e.message).toEqual("You have reached Max Y-boundary of galaxy")
         }
     })
-
+    test("Testing for turnLeft() Function ", () => {
+        command = ['l']
+        chandrayan.executeCommands(command);
+        expect(chandrayan.currDirection).toBe('W')
+    })
+    test("Testing for turnRight() Function ", () => {
+        command = ['r']
+        chandrayan.executeCommands(command);
+        expect(chandrayan.currDirection).toBe('E')
+    })
+    test("Testing for turnUpward() Function ", () => {
+        command = ['u']
+        chandrayan.executeCommands(command);
+        expect(chandrayan.currDirection).toBe('U')
+    })
+    test("Testing for turnDownward() Function ", () => {
+        command = ['d']
+        chandrayan.executeCommands(command);
+        expect(chandrayan.currDirection).toBe('D')
+    })
 })

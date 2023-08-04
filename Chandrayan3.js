@@ -124,13 +124,55 @@ class Chandrayan3_LunarCraft {
         }
     }
 
-    moveLeft(){}
+    turnLeft() {
+        if (this.currDirection == 'N') {
+            this.currDirection = 'W'
+        }
+        else if (this.currDirection == 'S') {
+            this.currDirection = 'E'
+        }
+        else if (this.currDirection == 'W') {
+            this.currDirection = 'S'
+        }
+        else if (this.currDirection == 'E') {
+            this.currDirection = 'N'
+        }
+        else if (this.currDirection == 'U') {
+            this.currDirection = 'W';
+        }
+        else if (this.currDirection == 'D') {
+            this.currDirection = 'E'
+        }
+    }
 
-    moveRight(){}
+    turnRight() {
+        if (this.currDirection == 'N') {
+            this.currDirection = 'E';
+        }
+        else if (this.currDirection == 'E') {
+            this.currDirection = 'S';
+        }
+        else if (this.currDirection == 'S') {
+            this.currDirection = 'W';
+        }
+        else if (this.currDirection == 'W') {
+            this.currDirection = 'N';
+        }
+        else if (this.currDirection == 'U') {
+            this.currDirection = 'E';
+        }
+        else if (this.currDirection == 'D') {
+            this.currDirection = 'W';
+        }
+    }
 
-    moveUpward(){}
+    turnUpward() {
+        this.currDirection = 'U';
+    }
 
-    moveDownward(){}
+    turnDownward() {
+        this.currDirection = 'D';
+    }
 
     executeCommands(command) {
         for (var cmd of command) {
@@ -142,16 +184,16 @@ class Chandrayan3_LunarCraft {
                     this.moveBackward()
                     break;
                 case 'l':
-                    this.moveLeft()
+                    this.turnLeft()
                     break;
                 case 'r':
-                    this.moveRight()
+                    this.turnRight()
                     break;
                 case 'u':
-                    this.moveUpward()
+                    this.turnUpward()
                     break;
                 case 'd':
-                    this.moveDownward()
+                    this.turnDownward()
                     break;
                 default:
                     throw Error("Invalid Command")
