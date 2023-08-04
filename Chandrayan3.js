@@ -20,7 +20,7 @@ class Chandrayan3_LunarCraft {
 
     moveForward() {
         if (this.currDirection == 'N') {
-            if (this.y + 1 <= this.galaxy.py) {
+            if (this.y+1 <= this.galaxy.py) {
                 this.y += 1;
             }
             else {
@@ -28,7 +28,7 @@ class Chandrayan3_LunarCraft {
             }
         }
         else if (this.currDirection == 'S') {
-            if (this.y - 1 >= this.galaxy.ny) {
+            if (this.y-1 >= this.galaxy.ny) {
                 this.y -= 1;
             }
             else {
@@ -36,7 +36,7 @@ class Chandrayan3_LunarCraft {
             }
         }
         else if (this.currDirection == 'E') {
-            if (this.x + 1 <= this.galaxy.px) {
+            if (this.x+1 <= this.galaxy.px) {
                 this.x += 1;
             }
             else {
@@ -44,23 +44,23 @@ class Chandrayan3_LunarCraft {
             }
         }
         else if (this.currDirection == 'W') {
-            if (this.x - 1 >= this.galaxy.nx) {
+            if (this.x-1 >= this.galaxy.nx) {
                 this.x -= 1;
             }
             else {
-                throw Error("You have reached Max X-boundary of galaxy");
+                throw Error("You have reached Max X-boundary of galaxy"); 
             }
         }
         else if (this.currDirection == 'U') {
-            if (this.z + 1 <= this.galaxy.pz) {
+            if (this.z+1 <= this.galaxy.pz) {
                 this.z += 1;
             }
             else {
-                throw Error("You have reached Max Z-boundary of galaxy");
+                throw Error("You have reached Max Z-boundary of galaxy"); 
             }
         }
         else if (this.currDirection == 'D') {
-            if (this.z - 1 >= this.galaxy.nz) {
+            if (this.z-1 >= this.galaxy.nz) {
                 this.z -= 1;
             }
             else {
@@ -69,7 +69,60 @@ class Chandrayan3_LunarCraft {
         }
     }
 
-    moveBackward(){}
+    moveBackward() {
+        if (this.currDirection == 'N') {
+            if (this.y - 1 >= this.galaxy.ny) {
+                this.y -= 1;
+            }
+            else {
+                throw Error("You have reached Max Y-boundary of galaxy");
+            }
+        }
+        else if (this.currDirection == 'S') {
+            if (this.y + 1 <= this.galaxy.py) {
+                this.y += 1;
+            }
+            else {
+                throw Error("You have reached Max Y-boundary of galaxy");
+            }
+        }
+        else if (this.currDirection == 'E') {
+
+            if (this.x - 1 >= this.galaxy.nx) {
+                this.x -= 1;
+            }
+            else {
+                throw Error("You have reached Max X-boundary of galaxy");
+            }
+        }
+        else if (this.currDirection == 'W') {
+
+            if (this.x + 1 <= this.galaxy.px) {
+                this.x += 1;
+            }
+            else {
+                throw Error("You have reached Max X-boundary of galaxy");
+            }
+        }
+        else if (this.currDirection == 'U') {
+
+            if (this.z - 1 >= this.galaxy.nz) {
+                this.z -= 1;
+            }
+            else {
+                throw Error("You have reached Max Z-boundary of galaxy");
+            }
+        }
+        else if (this.currDirection == 'D') {
+
+            if (this.z + 1 <= this.galaxy.pz) {
+                this.z += 1;
+            }
+            else {
+                throw Error("You have reached Max Z-boundary of galaxy");
+            }
+        }
+    }
 
     moveLeft(){}
 
@@ -80,7 +133,7 @@ class Chandrayan3_LunarCraft {
     moveDownward(){}
 
     executeCommands(command) {
-        for (const cmd of command) {
+        for (var cmd of command) {
             switch (cmd) {
                 case 'f':
                     this.moveForward()
