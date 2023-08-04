@@ -1,0 +1,22 @@
+{
+  "name": "chandrayan_3_problem",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UMANG13-coder/Chandrayan_3_Lunar_Craft.git"
+  },
+  "author": "Umang Varotariya",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/UMANG13-coder/Chandrayan_3_Lunar_Craft/issues"
+  },
+  "homepage": "https://github.com/UMANG13-coder/Chandrayan_3_Lunar_Craft#readme",
+  "dependencies": {
+    "jest": "^29.6.2"
+  }
+}
