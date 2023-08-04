@@ -14,7 +14,7 @@ https://blog.incubyte.co/blog/chandrayaan-3-tdd-assessment/
 
 ### In package.json in script 
 
-  "scripts": {
+- "scripts": {
     "test": "jest"
   },
 
