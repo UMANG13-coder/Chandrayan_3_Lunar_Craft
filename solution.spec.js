@@ -1,4 +1,4 @@
-const { Galaxy, Chandrayan3_LunarCraft } = require('./Chandrayan3')
+const { Galaxy, Chandrayan3_LunarCraft } = require('./Chandrayan3_testFile')
 
 describe("Initializa the state of Chandrayan3_LunarCraft class and Galaxy class", () => {
 
@@ -94,3 +94,4 @@ describe("Testing Classes Functions", () => {
         expect(chandrayan.currDirection).toBe('D')
     })
 })
+
