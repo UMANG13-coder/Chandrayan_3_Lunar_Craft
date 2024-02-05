@@ -19,7 +19,7 @@ describe("Initializa the state of Chandrayan3_LunarCraft class and Galaxy class"
         expect(chandrayan.galaxy.nx).toBe(-3);
         expect(chandrayan.galaxy.ny).toBe(-3);
         expect(chandrayan.galaxy.nz).toBe(-3);
-    })
+    });
 });
 
 describe("Testing Classes Functions", () => {
